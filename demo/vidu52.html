@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vidu52</title>
+
+</head>
+<body>
+    <img id="myimage" onclick="changeimage()"
+    border="0" src="https://images.viblo.asia/a87852d0-d60c-4a7c-ae42-0bfb6679ecb3.gif"
+    width="100" height="180" />
+    <p>Click</p>
+    <script>
+        var cc=0;
+     function changeimage(){
+        if(cc==0){
+            document.getElementById('myimage').src="https://i.pinimg.com/originals/60/13/c2/6013c2e968758460f424d11eb3670e67.gif"
+            cc=1;
+        }else{
+            document.getElementById('myimage').src="https://images.viblo.asia/a87852d0-d60c-4a7c-ae42-0bfb6679ecb3.gif"
+            cc=0;
+        }
+        
+     }
+     </script>
+</body>
+</html>
