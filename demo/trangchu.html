@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KC326</title>
     <style>
-        a:hover{
-            color: red;
-        }
-        @keyframes header {
-            from {color: black;}
-            to {color: red;}
-            }
         @keyframes shadow{
             from{
                 filter: invert(1);
             }to{
                 filter: drop-shadow(2px 4px 6px black);
             }
+        }
+        @keyframes header {
+            from {color: black;}
+            to {color: red;}
+            }
+        li:hover{
+            background-color: #faeded;
         }
         @keyframes rotation {
             from {
@@ -28,78 +28,95 @@
                 transform: rotate(359deg);
             }
             }
-
     </style>
 </head>
-<body style="background-color: #f5f5f5;">
-    <div class="container" style="margin-left: 122.5px;margin-right: 122.5px;">
-        <div class="header" style="background-color: #ffffff;background-color: #ffffff;height: 240px;">
-            <table style="width: 100%;">
-                <tr>
-                    <td><img style="height: 170px;animation: rotation 10s infinite linear;" src="https://assets.coingecko.com/coins/images/4976/large/ctu.png?1547040399" alt=""></td>
-                    <td>
-                        <h1 style="font-size: 60px;animation:header ease 1s infinite;">IoT Technology and Applications</h1>
-                    </td>
-                </tr>
-            </table>
-            <ul style="margin-top: 0;display:flex;justify-content: space-around;list-style: none;padding: 0;width: 700px;font-size: 20px;margin-left: 260px;">
-                <a style="color: red;" href="trangchu.html"><li>Trang chủ</li></a>
-                <a href="muctieu.html"><li>Mục tiêu</li></a>
-                <a href="chuandaura.html"><li>Chuẩn đầu ra</li></a>
-                <a href="ppgiangday.html"><li>PP giảng dạy & nhiệm vụ</li></a>
-                <a href="danhgia.html"><li>Đánh giá</li></a>
-
-            </ul>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<body style="background-color: #fff0f0;">
+    <div class="container" style="background-color: #f5f5f5; margin-top: 40px;margin-bottom: 40px;filter: drop-shadow(2px 4px 6px black);">
+        <div class="mt-4" style="height: 10px;"></div>
+        <div class="header" style="background-color: #ffffff;" >
+            <div class="row">
+                <div class="col-md-2">
+                    <img style="height: 170px;animation: rotation 10s infinite linear;" src="https://assets.coingecko.com/coins/images/4976/large/ctu.png?1547040399" alt="">
+                </div>
+                <div class="col-md-10">
+                    <h1 style="font-size: 50px;margin-top: 5%;text-align: left;animation:header ease 1s infinite;">IoT Technology and Applications</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <ul class="nav justify-content-center" style="margin-bottom: 20px;">
+                        <li class="nav-item">
+                          <a style="border: 1px solid #f4cfcf;color: red;" class="nav-link active" href="trangchu.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                          <a style="border: 1px solid #f4cfcf;" class="nav-link" href="muctieu.html">Mục tiêu</a>
+                        </li>
+                        <li class="nav-item">
+                          <a style="border: 1px solid #f4cfcf;" class="nav-link" href="chuandaura.html">Chuẩn đầu ra</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="border: 1px solid #f4cfcf;" class="nav-link" href="ppgiangday.html">PP giảng dạy & nhiệm vụ</a>
+                          </li>
+                          <li class="nav-item">
+                            <a style="border: 1px solid #f4cfcf;" class="nav-link" href="danhgia.html">Đánh giá</a>
+                          </li>
+                      </ul>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
         </div>
-        <div style="background-color: #ffffff;font-size: 20px;margin-top: 10px;padding: 10px 10px 10px 10px;">
+        <div class="body" style="background-color: #ffffff;margin-top: 20px;font-size: 20px;padding: 20px;">
             <p style="text-align: center;font-size: 25px;margin-top: 10px;"><b>ĐỀ CƯƠNG HỌC PHẦN</b></p>
-            <table style="width:100%;">
-                <tr>
-                    <td style="width: 680px;">
-            <p style="margin-top: 0;"><b>1. Tên học phần: <i>Công nghệ IoT và ứng dụng (IoT Technology and Applications)</i></b></p>
-            <table style="width:100%;margin-left: 40px;">
-                <tr>
-                    <td style="width: 350px;text-align: left;"><b>-Mã số học phần:</b></td>
-                    <td style="text-align:inherit;">KC326.</td>
-                </tr>
-                <tr>
-                    <td style="text-align: left;"><b>-Số tín chỉ học phần:</b></td>
-                    <td style="text-align:inherit;">02 tín chỉ.</td>
-                </tr>
-                <tr>
-                    <td style="text-align: left;"><b>-Số tiết học phần:</b></td>
-                    <td style="text-align:inherit;">30 tiết lý thuyết và 30 tiết tự học.</td>
-                </tr>
-            </table>
-            <p><b>2. Đơn vị phụ trách học phần:</b></p>
-            <table style="width:100%;margin-left: 40px;">
-                <tr>
-                    <td style="width: 350px;text-align: left;"><b>-Bộ môn:</b></td>
-                    <td style="text-align:inherit;">Tự động hóa.</td>
-                </tr>
-                <tr>
-                    <td style="text-align: left;"><b>Khoa/Viện/Trung tâm/Bộ môn:</b></td>
-                    <td style="text-align:inherit;">Công nghệ.</td>
-                </tr>
-            </table>
-                    </td>
-                    <td>
-                        <img style="width: 538px;height: 250px;margin-top: 35px;animation:shadow ease 5s infinite;" src="https://www-file.huawei.com/-/media/corporate/images/magazine/communicate/84/08.jpg"  alt="">
-                    </td>
-                </tr>
-            </table>
+            <div class="row" style="padding: 10px 10px 10px 10px;">
+                <div class="col-md-6">
+                    <p><b>1. Tên học phần: <i>Công nghệ IoT và ứng dụng</i></b></p>
+                    <table style="width:100%;margin-left: 20px;">
+                        <tr>
+                            <td style="width: 250px;text-align: left;">-Mã số học phần:</td>
+                            <td style="text-align:inherit;">KC326.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">-Số tín chỉ học phần:</td>
+                            <td style="text-align:inherit;">02 tín chỉ.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">-Số tiết học phần:</td>
+                            <td style="text-align:inherit;">30 tiết lý thuyết, 30 tiết tự học.</td>
+                        </tr>
+                    </table>
+                    <p><b>2. Đơn vị phụ trách học phần:</b></p>
+                    <table style="width:100%;margin-left: 20px;">
+                        <tr>
+                            <td style="width: 250px;text-align: left;">-Bộ môn:</td>
+                            <td style="text-align:inherit;">Tự động hóa.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">-Khoa/Bộ môn:</td>
+                            <td style="text-align:inherit;">Công nghệ.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <img style="width: 100%;height: 250px;margin-top: 35px;animation:shadow ease 5s infinite;" src="https://www-file.huawei.com/-/media/corporate/images/magazine/communicate/84/08.jpg"  alt="">
+                </div>
+            </div>
             <hr>
             <div style="margin-left:15%;margin-right:15%;text-align: justify;filter: drop-shadow(2px 4px 6px black);padding: 10px 10px 10px 10px;border: 1px solid #f44336;background-color: #fff5f4;">
                 <p style="text-align: center;"><b><i><u>Tóm tắm nội dung học phần</u></i></b></p>
             <p >&emsp;IoT là công nghệ ứng dụng Internet để kết nối các thiết bị phần cứng theo nguyên lí không dây và tốc độ cao. Học phần này được xây dựng giúp sinh viên ngành <b>tự động hóa</b> và <b>cơ điện tử</b> trải nghiệp nguyên lí, thiết kế, kết nối, lập trình, thu thập dữ liệu thông qua giao diện web được lập trình theo khả năng của từng sinh viên qua các ứng dụng cơ bản được giới thiệu và hướng dẫn trên lớp của giảng viên.</p>
             </div>
         </div>
-
-        <div class="header" style="margin-top: 30px;" >
+        <div class="footer" style="margin-top: 30px;" >
             <p style="margin-bottom: 0;text-align: end;"><i>Cần Thơ 15/12/2021</i></p>
             <hr style="margin-bottom: 0;">
             <p style="margin-top: 0;"><i>@Bản quyền thuộc trường đại học Cần Thơ.</i></p>
         </div>
+
     </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
 </body>
 </html>

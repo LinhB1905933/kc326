@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KC326</title>
     <style>
-        a:hover{
-            color: red;
+        li:hover,th:hover,tr:hover{
+            background-color: #faeded;
         }
-        @keyframes header {
-            from {color: black;}
-            to {color: red;}
+        @keyframes shadow{
+            from{
+                filter: invert(1);
+            }to{
+                filter: drop-shadow(2px 4px 6px black);
             }
-            @keyframes rotation {
+        }
+        @keyframes rotation {
             from {
                 transform: rotate(0deg);
             }
@@ -21,68 +24,96 @@
                 transform: rotate(359deg);
             }
             }
-
+            @keyframes header {
+            from {color: black;}
+            to {color: red;}
+            }
     </style>
 </head>
-<body style="background-color: #f5f5f5;">
-    <div class="container" style="margin-left: 122.5px;margin-right: 122.5px;">
-        <div class="header" style="background-color: #ffffff;background-color: #ffffff;height: 240px;">
-            <table style="width: 100%;">
-                <tr>
-                    <td><img style="height: 170px;animation: rotation 10s infinite linear;" src="https://assets.coingecko.com/coins/images/4976/large/ctu.png?1547040399" alt=""></td>
-                    <td>
-                        <h1 style="font-size: 60px;animation:header ease 1s infinite;">IoT Technology and Applications</h1>
-                    </td>
-                </tr>
-            </table>
-            <ul style="margin-top: 0;display:flex;justify-content: space-around;list-style: none;padding: 0;width: 700px;font-size: 20px;margin-left: 260px;">
-                <a href="trangchu.html"><li>Trang chủ</li></a>
-                <a  href="muctieu.html"><li>Mục tiêu</li></a>
-                <a  href="chuandaura.html"><li>Chuẩn đầu ra</li></a>
-                <a href="ppgiangday.html"><li>PP giảng dạy & nhiệm vụ</li></a>
-                <a style="color: red;" href="danhgia.html"><li>Đánh giá</li></a>
-
-            </ul>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<body style="background-color: #fff0f0;">
+    <div class="container" style="background-color: #f5f5f5; margin-top: 40px;margin-bottom: 40px;filter: drop-shadow(2px 4px 6px black);">
+        <div class="mt-4" style="height: 10px;"></div>
+        <div class="header" style="background-color: #ffffff;">
+            <div class="row">
+                <div class="col-md-2">
+                    <img style="height: 170px;animation: rotation 10s infinite linear;" src="https://assets.coingecko.com/coins/images/4976/large/ctu.png?1547040399" alt="">
+                </div>
+                <div class="col-md-10">
+                    <h1 style="font-size: 50px;margin-top: 5%;text-align: left;animation:header ease 1s infinite;">IoT Technology and Applications</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <ul class="nav justify-content-center" style="margin-bottom: 20px;">
+                        <li class="nav-item">
+                          <a style="border: 1px solid #f4cfcf;" class="nav-link active" href="trangchu.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                          <a style="border: 1px solid #f4cfcf;" class="nav-link" href="muctieu.html">Mục tiêu</a>
+                        </li>
+                        <li class="nav-item">
+                          <a style="border: 1px solid #f4cfcf;" class="nav-link" href="chuandaura.html">Chuẩn đầu ra</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="border: 1px solid #f4cfcf;" class="nav-link" href="ppgiangday.html">PP giảng dạy & nhiệm vụ</a>
+                          </li>
+                          <li class="nav-item">
+                            <a style="border: 1px solid #f4cfcf;color: red;" class="nav-link" href="danhgia.html">Đánh giá</a>
+                          </li>
+                      </ul>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
         </div>
-        <div style="background-color: #ffffff;font-size: 20px;margin-top: 10px;padding: 10px 10px 10px 10px;height: 230px;">
-            <p style="text-align: center;font-size: 25px;margin-top: 10px;"><b>CÁCH ĐÁNH GIÁ</b></p>
-            <table style="width: 94%;margin-left:40px;text-align:center;border: 1px solid;">
-                <tr>
-                    <td style="border-bottom: 1px solid #000;border-right: 1px solid #000;"><b>TT</b></td>
-                    <td style="border-right: 1px solid #000;border-bottom: 1px solid #000;"><b>Điểm thành phần</b></td>
-                    <td style="border-right: 1px solid #000;border-bottom: 1px solid #000;" style="width: 400px;"><b>Quy định</b></td>
-                    <td style="border-right: 1px solid #000;border-bottom: 1px solid #000;"><b>Trọng số</b></td>
-                    <td style="border-bottom: 1px solid #000;"><b>Mục tiêu</b></td>
-                </tr>
-                <tr>
-                    <td style="border-bottom: 1px solid #000;border-right: 1px solid #000;">1</td>
-                    <td style="border-right: 1px solid #000;border-bottom: 1px solid #000;" >Điểm bài tập thiết kế mô hình</td>
-                    <td style="border-right: 1px solid #000;border-bottom: 1px solid #000;" style="width: 400px;">-Báo cáo mô hình cuối kỳ.</td>
-                    <td style="border-right: 1px solid #000;border-bottom: 1px solid #000;">30%</td>
-                    <td style="border-bottom: 1px solid #000;">CO2 - CO7</td>
-                </tr>
-                <tr>
-                    <td style="border-bottom: 1px solid #000;border-right: 1px solid #000;">2</td>
-                    <td style="border-right: 1px solid #000;border-bottom: 1px solid #000;" >Điểm giữa kỳ</td>
-                    <td style="border-right: 1px solid #000;border-bottom: 1px solid #000;" style="width: 400px;">-Báo cáo bằng thực hiện video clip về mô hình và poster đã thực hiện.</td>
-                    <td style="border-right: 1px solid #000;border-bottom: 1px solid #000;">20%</td>
-                    <td style="border-bottom: 1px solid #000;">CO2 - CO7</td>
-                </tr>
-                <tr>
-                    <td style="border-right: 1px solid #000;">3</td>
-                    <td style="border-right: 1px solid #000;" >Điểm thi kết thúc học phần</td>
-                    <td style="border-right: 1px solid #000;">-Thi kiến thức lý thuyết gồm trắc nghiệm và bài tập.</td>
-                    <td style="border-right: 1px solid #000;">50%</td>
+        <div class="body" style="margin-top: 20px;background-color: #ffffff;font-size: 20px;padding: 20px;">
+            <p style="text-align: center;font-size: 25px;margin-top: 10px;"><b>ĐÁNH GIÁ</b></p>
+            <table class="table table-bordered" style="text-align: center;">
+                <thead>
+                  <tr>
+                    <th>TT</th>
+                    <th style="width:35%;"><p>Điểm thành phần</p></th>
+                    <th scope="col" style="width:35%;"><p>Quy định</p></th>
+                    <th scope="col">Trọng số</th>
+                    <th scope="col">Mục tiêu</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td style="text-align: left;">Điểm bài tập thiết kế mô hình</td>
+                    <td style="text-align: left;">-Báo cáo mô hình cuối kỳ.</td>
+                    <td>30%</td>
                     <td>CO2 - CO7</td>
-                </tr>
-            </table>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td style="text-align: left;">Điểm giữa kỳ</td>
+                    <td style="text-align: left;">-Báo cáo bằng thực hiện video clip về mô hình và poster đã thực hiện.</td>
+                    <td>20%</td>
+                    <td>CO2 - CO7</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td style="text-align: left;">Điểm thi kết thúc học phần</td>
+                    <td style="text-align: left;">-Thi kiến thức lý thuyết gồm trắc nghiệm và bài tập.</td>
+                    <td>50%</td>
+                    <td>CO2 - CO7</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
         </div>
-
-        <div class="header" style="margin-top: 30px;" >
+        <div class="footer" style="margin-top: 30px;" >
             <p style="margin-bottom: 0;text-align: end;"><i>Cần Thơ 15/12/2021</i></p>
             <hr style="margin-bottom: 0;">
             <p style="margin-top: 0;"><i>@Bản quyền thuộc trường đại học Cần Thơ.</i></p>
         </div>
+
     </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
 </body>
 </html>
