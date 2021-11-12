@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương trình bậc 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body style="background: url(https://3.bp.blogspot.com/-jeCqyTH3jXI/UnoprkeQB6I/AAAAAAAAFPA/X9V6XjlES_Y/s1600/707657b39hsqemsd.gif), url(https://i.pinimg.com/originals/ce/12/25/ce1225f92e766b3a87113dc69560e88f.jpg);
+background-size: cover;
+background-position: center center;">
+<div class="header" style="height: 50px;background-color: rgba(255, 255, 255, 0.5);">
+        <div class="container">
+            <div class="row">
+                <a href="#"><i class="fas fa-home" style="margin-top: 5px;font-size: 35px;color: black;">&nbsp;&nbsp;</i></a>
+                <a href="#"><p style="margin-top: 5px;font-size: 25px;color: black;"><b>Home</b></p></a>
+                <!-- <a href="#" style="margin-left: 76%;"><i class="fas fa-list" style="margin-top: 5px;font-size: 35px;color: black;"></i></a> -->
+                <!-- <a href="#" style="margin-left: 6px;"><i class="fab fa-instagram-square" style="margin-top: 5px;font-size: 35px;color: black;"></i></a> -->
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="padding: 20px;">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="list-group" style="text-align: center;filter: drop-shadow(2px 4px 6px black);">
+                    <a href="homepage.html" class="list-group-item list-group-item-action">Trang chủ</a>
+                    <a href="phuongtrinhbac2.html" class="list-group-item list-group-item-action" style="color: red;">Giải phương trình</a>
+                    <a href="dothihamso.html" class="list-group-item list-group-item-action" >Đồ thị hàm số</a>
+                  </div>
+            </div>
+        <div class="col-md-10" style=" border-left: 1px solid #000;">
+            <div class="container" style="background-color: #ffffff;padding: 25px;filter: drop-shadow(2px 4px 6px black);">
+                <h2 style="text-align: center;">Giải phương trình ax<sup>2</sup>+bx+c=0 </h2>
+        <form action="#">
+            <div class="form-group">
+                <label for="formGroupExampleInput">Hệ số a:</label>
+                <input type="text" class="form-control" id="a" placeholder="Nhập hệ số thứ nhất">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Hệ số b:</label>
+                <input type="text" class="form-control" id="b" placeholder="Nhập hệ số thứ hai">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Hệ số c:</label>
+                <input type="text" class="form-control" id="c" placeholder="Nhập hệ số thứ ba">
+              </div>
+              <p class="kq" style="text-align: center;color: red;"></p>
+              <button style="margin-left:47%;"  class="btn btn-success btn-success-tinhtoan">Kết quả</button>
+        </form>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    <div class="footer" style="height: 50px;margin-top:12%;">
+        <hr style="margin: 0;background-color: black;">
+          <div class="container">
+              <div class="row" style="margin-top:10px;">
+                  <p><i>Last Update 11/2/2021</i></p>
+                  <a href="#" style="margin-left: 76%;"><i class="fab fa-facebook" style="font-size: 35px;color: black;"></i></a>
+                <a href="#" style="margin-left: 6px;"><i class="fab fa-instagram-square" style="font-size: 35px;color: black;"></i></a>
+              </div>
+          </div>
+      </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        $('.btn-success-tinhtoan').click(function(e){
+            e.preventDefault();
+            var a = parseFloat($('#a').val());
+            var b = parseFloat($('#b').val());
+            var c = parseFloat($('#c').val());
+            var denta= b*b-4*(a*c);
+            if(denta<0){
+                $('.kq').text('Phương trình vô nghiệm.');
+            }else if(denta==0){
+                var x=-b/(2*a);
+                $('.kq').text('Phương trình có nghiệm kép là '+x);
+            }else if(denta>0){
+                var x1=(-b+Math.sqrt(denta))/(2*a);
+                var x2=(-b-Math.sqrt(denta))/(2*a);
+                $('.kq').text("Phương trình có 2 nghiệm phân biệt là "+x1+" và "+x2);
+            }
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồ thị hàm số</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body style="background: url(https://3.bp.blogspot.com/-jeCqyTH3jXI/UnoprkeQB6I/AAAAAAAAFPA/X9V6XjlES_Y/s1600/707657b39hsqemsd.gif), url(https://i.pinimg.com/originals/ce/12/25/ce1225f92e766b3a87113dc69560e88f.jpg);
+background-size: cover;
+background-position: center center;">
+<div class="header" style="height: 50px;background-color: rgba(255, 255, 255, 0.5);">
+        <div class="container">
+            <div class="row">
+                <a href="#"><i class="fas fa-home" style="margin-top: 5px;font-size: 35px;color: black;">&nbsp;&nbsp;</i></a>
+                <a href="#"><p style="margin-top: 5px;font-size: 25px;color: black;"><b>Home</b></p></a>
+                <!-- <a href="#" style="margin-left: 76%;"><i class="fas fa-list" style="margin-top: 5px;font-size: 35px;color: black;"></i></a> -->
+                <!-- <a href="#" style="margin-left: 6px;"><i class="fab fa-instagram-square" style="margin-top: 5px;font-size: 35px;color: black;"></i></a> -->
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="padding: 20px;">
+        <!-- <a href="#"><button type="button" class="btn btn-danger">Giải phương trinh bậc 2</button></a> -->
+        <div class="row">
+            <div class="col-md-2">
+                <div class="list-group" style="text-align: center;filter: drop-shadow(2px 4px 6px black);">
+                    <a href="homepage.html" class="list-group-item list-group-item-action">Trang chủ</a>
+                    <a href="phuongtrinhbac2.html" class="list-group-item list-group-item-action">Giải phương trình</a>
+                    <a href="dothihamso.html" class="list-group-item list-group-item-action" style="color: red;">Đồ thị hàm số</a>
+                  </div>
+            </div>
+            <div class="col-md-10" style="border-left: 1px solid #000;">
+                <div class="container" style="background-color: #ffffff;filter: drop-shadow(2px 4px 6px black);">
+                    <h3 style="text-align: center;">Đồ thị hàm số</h3>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <!-- <div class="col-md-3"></div> -->
+        </div>
+      </div>
+      <div class="footer" style="height: 50px;">
+        <hr style="margin: 0;background-color: #000;">
+          <div class="container">
+              <div class="row" style="margin-top:10px;">
+                  <p><i>Last Update 11/2/2021</i></p>
+                  <a href="#" style="margin-left: 76%;"><i class="fab fa-facebook" style="font-size: 35px;color: black;"></i></a>
+                <a href="#" style="margin-left: 6px;"><i class="fab fa-instagram-square" style="font-size: 35px;color: black;"></i></a>
+              </div>
+          </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        
+        const labels = [
+        -5,
+        -4,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        2,3,4,5
+        ];
+        const data = {
+        labels: labels,
+        datasets: [{
+            label: 'y=x+2',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [{
+        x: -3,
+        y: -1
+    }, {
+        x: -2,
+        y: 0
+    }, {
+        x: -1,
+        y: 1
+    }, {
+        x: 0,
+        y: 2
+    }, {
+        x: 1,
+        y: 3
+    }, {
+        x: 2,
+        y: 4
+    }],
+        },{
+            label: 'Trục Ox',
+            backgroundColor: 'rgb(108,117,125)',
+            borderColor: 'rgb(108,117,125)',
+            data: [{x:-5,y:0},{x:5,y:0}],
+        },{
+            label: 'Trục Oy',
+            backgroundColor: 'rgb(108,117,125)',
+            borderColor: 'rgb(108,117,125)',
+            data: [{x:0,y:4},{x:0,y:-4}],
+        },{
+            label: 'y=x^2',
+            lineTension:0.4,
+            backgroundColor: 'rgb(40,167,69)',
+            borderColor: 'rgb(40,167,69)',
+            data: [{
+        x: -2,
+        y: 4
+    }, {
+        x: -1,
+        y: 1
+    }, {
+        x: 0,
+        y: 0
+    }, {
+        x: 1,
+        y: 1
+    }, {
+        x: 2,
+        y: 4
+    }],
+        },{
+            label: 'x^3+4x^2+4',
+            lineTension:0.4,
+            backgroundColor: 'rgb(0,123,255)',
+            borderColor: 'rgb(0,123,255)',
+            data: [{
+        x: -2,
+        y: 4
+    }, {
+        x: -1,
+        y: 0
+    }, {
+        x: 0,
+        y: 2
+    }, {
+        x: 1,
+        y: 4
+    }, {
+        x: 2,
+        y: 0
+    }],
+        }]
+        };
+        const config = {
+        type: 'line',
+        data: data,
+        options: { scales: {
+                    yAxes: [{
+                        ticks: {
+                            max: 5,
+                min: 0,
+                stepSize: 0.5
+                        }
+                    }]
+                }
+}
+};
+        // === include 'setup' then 'config' above ===
+
+        const myChart = new Chart(
+            document.getElementById('myChart').getContext('2d'),
+            config
+        );
+   </script>
+      
+
+</body>
+</html>
